@@ -7,12 +7,13 @@
 
     <string name="yourAge">Age</string>
     <string name="yourName">Name</string>
-    <string name="doctorPhoneNumber">Doctor phone number</string>
+    <string name="doctorPhoneNumber">Doctor Phone Number</string>
     <string name="doctorName">Doctor Name</string>
 
     <string name="helpWillBeSent">Help will be sent in 10 seconds</string>
     <string name="cardiacArrestDetected">Cardiac Arrest Detected!</string>
     <string name="condition">Please give us a little information about your heart condition.</string>
+
 
     <string name="startMonitoring">Start Monitoring</string>
     <string name="stopMonitoring">Stop Monitoring</string>

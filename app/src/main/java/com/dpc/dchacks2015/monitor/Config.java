@@ -8,6 +8,8 @@ public class Config {
     public class JSONConfig {
         public static final String heart_rate_key = "heartrate";
         public static final String TIME_KEY = "time";
+        public static final String DOCTOR_NAME_KEY = "doctorName";
+        public static final String DOCTOR_PHONE_NUMBER_KEY = "doctorphonenumber";
         public static final String HISTORY_KEY = "history";
         public static final String NAME_KEY = "name";
         public static final String AGE_KEY = "age";

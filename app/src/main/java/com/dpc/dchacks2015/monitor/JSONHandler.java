@@ -21,9 +21,11 @@ public class JSONHandler {
 
         String name = preferences.getString(Config.JSONConfig.NAME_KEY, "");
         String history = preferences.getString(Config.JSONConfig.HISTORY_KEY, "");
+        String doctorPhoneNumber = preferences.getString(Config.JSONConfig.DOCTOR_PHONE_NUMBER_KEY, "");
+        String doctorName = preferences.getString(Config.JSONConfig.DOCTOR_NAME_KEY, "");
         int age = preferences.getInt(Config.JSONConfig.AGE_KEY, 0);
 
-        return new PatientInfo(name, history, age);
+        return new PatientInfo(name, history, age, doctorPhoneNumber, doctorName);
     }
 
     public static void savePatientInfo(Context context, PatientInfo info) {
@@ -33,6 +35,8 @@ public class JSONHandler {
         editor.putString(Config.JSONConfig.NAME_KEY, info.getName());
         editor.putString(Config.JSONConfig.HISTORY_KEY, info.getHistory());
         editor.putInt(Config.JSONConfig.AGE_KEY, info.getAge());
+        editor.putString(Config.JSONConfig.DOCTOR_NAME_KEY, info.getDoctorName());
+        editor.putString(Config.JSONConfig.DOCTOR_PHONE_NUMBER_KEY, info.getDoctorPhoneNumber());
 
         editor.apply();
     }

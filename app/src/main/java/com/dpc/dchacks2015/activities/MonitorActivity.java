@@ -72,6 +72,7 @@ public class MonitorActivity extends ActionBarActivity implements HeartBeatListe
                 if(monitoring.getText().equals(startMonitoring)) {
                     monitoring.setText(stopMonitoring);
                     startMonitor();
+                    onHeartBeat(new HeartRate(88, 200));
                 }
                 else {
                     monitoring.setText(startMonitoring);
@@ -116,8 +117,6 @@ public class MonitorActivity extends ActionBarActivity implements HeartBeatListe
 
 
         graph.addSeries(series);
-
-        onHeartBeat(new HeartRate(88, 200));
 
         for(DataPoint point : data) {
             heartRates.add(new HeartRate((int)point.getY(), (long)point.getX()));

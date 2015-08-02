@@ -33,13 +33,17 @@ public class CardiacArrestHandler {
                 "Name: %s\n\n" +
                 "Age: %s\n\n" +
                 "Heart conditions: %s\n" +
-                "Recent heart rate data: %s\n";
+                "Recent heart rate data: %s\n" +
+                "Heart Doctor Name: %s\n" +
+                "Heart Doctor Phone Number: %s\n";
 
         String location = "lat: " + " not implemented" + " long: " + " not implemented";
         String name = patientInfo.getName();
         String age = patientInfo.getAge() + "";
         String conditions = patientInfo.getHistory();
         String hrData = "";
+        String doctorName = patientInfo.getDoctorName();
+        String doctorNumber = patientInfo.getDoctorPhoneNumber();
 
         int size = heartRateList.size();
 
@@ -48,7 +52,7 @@ public class CardiacArrestHandler {
         hrData += "bpm: " + heartRateList.get(0).getValue() + "  time: " + heartRateList.get(0).getTime();
 
         // Fill in the template data
-        template = String.format(template, location, name, age, conditions, hrData);
+        template = String.format(template, location, name, age, conditions, hrData, doctorName, doctorNumber);
 
         Log.d("monitor", template);
 

@@ -28,6 +28,8 @@ public class SettingsActivity extends ActionBarActivity {
         final EditText name = (EditText) findViewById(R.id.edt_yourName);
         final EditText age = (EditText) findViewById(R.id.edt_yourAge);
         final EditText heartCondition = (EditText) findViewById(R.id.edt_condition);
+        final EditText doctorName = (EditText) findViewById(R.id.edt_doctorName);
+        final EditText doctorNumber = (EditText) findViewById(R.id.edt_doctorPhone);
 
         // Make the condition edit text scroll
         heartCondition.setMovementMethod(new ScrollingMovementMethod());
@@ -36,6 +38,8 @@ public class SettingsActivity extends ActionBarActivity {
         name.setText(savedPatientInfo.getName());
         age.setText(savedPatientInfo.getAge() != 0 ? savedPatientInfo.getAge() + "" : "");
         heartCondition.setText(savedPatientInfo.getHistory());
+        doctorName.setText(savedPatientInfo.getDoctorName());
+        doctorNumber.setText(savedPatientInfo.getDoctorPhoneNumber());
 
         ((Button) findViewById(R.id.btn_save)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,9 +47,11 @@ public class SettingsActivity extends ActionBarActivity {
                 String n = name.getText().toString();
                 int a = Integer.parseInt(age.getText().toString());
                 String h = heartCondition.getText().toString();
+                String dn = doctorName.getText().toString();
+                String dp = doctorNumber.getText().toString();
 
                 // Save the patient info
-                JSONHandler.savePatientInfo(SettingsActivity.this, new PatientInfo(n, h, a));
+                JSONHandler.savePatientInfo(SettingsActivity.this, new PatientInfo(n, h, a, dp, dn));
             }
         });
 

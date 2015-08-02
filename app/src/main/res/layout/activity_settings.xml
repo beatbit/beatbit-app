@@ -67,7 +67,45 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/doctorName"
+                    android:ems="10"
+                    android:id="@+id/edt_doctorName" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:hint="@string/doctorPhoneNumber"
+                    android:id="@+id/edt_doctorPhone" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardElevation="4dp"
+            card_view:cardCornerRadius="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/linearlayoutPadded"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:isScrollContainer="true"
+                    android:minHeight="120dp"
                     android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:scrollbars="vertical"
                     android:ems="10"
                     android:id="@+id/edt_condition"
                     android:hint="@string/condition" />
@@ -75,6 +113,7 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
 
         <Button
             style="@style/button"
