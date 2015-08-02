@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BeatBit</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="yourAge">Age</string>
+    <string name="yourName">Name</string>
+    <string name="doctorPhoneNumber">Doctor phone number</string>
+    <string name="doctorName">Doctor Name</string>
+
+    <string name="helpWillBeSent">Help will be sent in 10 seconds</string>
+    <string name="cardiacArrestDetected">Cardiac Arrest Detected!</string>
+    <string name="condition">Please give us a little information about your heart condition.</string>
+
+    <string name="startMonitoring">Start Monitoring</string>
+    <string name="stopMonitoring">Stop Monitoring</string>
+    <string name="iNeedHelp">I need help!</string>
+    <string name="imOk">I\'m ok!</string>
+    <string name="save">Save</string>
+</resources>
