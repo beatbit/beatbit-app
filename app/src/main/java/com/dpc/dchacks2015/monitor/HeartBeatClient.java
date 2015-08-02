@@ -19,18 +19,17 @@ public class HeartBeatClient {
 
         io.connect();
 
-        io.emit("msga", "msga");
-//        io.on(Config.IOEvents.EVENT_HEART_BEAT, new Emitter.Listener() {
-//            @Override
-//            public void call(Object... args) {
-//                try {
-//                    JSONObject obj = new JSONObject((String) args[0]);
-//                    listener.onHeartBeat(new HeartRate(obj.getInt(Config.JSONConfig.heart_rate_key), obj.getLong(Config.JSONConfig.TIME_KEY)));
-//                } catch(JSONException e) {
-//                    Log.e(TAG, Log.getStackTraceString(e));
-//                }
-//            }
-//        });
+        io.on(Config.IOEvents.EVENT_HEART_BEAT, new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                try {
+                    JSONObject obj = new JSONObject((String) args[0]);
+                    listener.onHeartBeat(new HeartRate(obj.getInt(Config.JSONConfig.HEART_RATE_KEY), obj.getLong(Config.JSONConfig.TIME_KEY)));
+                } catch(JSONException e) {
+                    Log.e(TAG, Log.getStackTraceString(e));
+                }
+            }
+        });
     }
 
     public void connect() {

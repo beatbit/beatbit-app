@@ -6,7 +6,7 @@ package com.dpc.dchacks2015.monitor;
 public class Config {
 
     public class JSONConfig {
-        public static final String heart_rate_key = "heartrate";
+        public static final String HEART_RATE_KEY = "heartrate";
         public static final String TIME_KEY = "time";
         public static final String DOCTOR_NAME_KEY = "doctorName";
         public static final String DOCTOR_PHONE_NUMBER_KEY = "doctorphonenumber";
