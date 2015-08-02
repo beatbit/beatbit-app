@@ -1,11 +1,13 @@
 package com.dpc.dchacks2015.monitor;
 
+import android.app.PendingIntent;
 import android.content.Context;
 import android.location.Location;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,9 +58,9 @@ public class CardiacArrestHandler {
 
         Log.d("monitor", template);
 
-
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage(NUMBER_911, null, template, null, null);
+        SmsManager sms = SmsManager.getDefault();
+        ArrayList<String> parts = sms.divideMessage(template);
+        sms.sendMultipartTextMessage(NUMBER_911, null, parts, null, null);
     }
 
 }

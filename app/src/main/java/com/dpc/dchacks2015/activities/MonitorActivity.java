@@ -38,6 +38,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -58,6 +59,11 @@ public class MonitorActivity extends ActionBarActivity implements HeartBeatListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monitor);
+
+        List<HeartRate> li = new ArrayList<HeartRate>();
+        li.add(new HeartRate(401, 401));
+
+        new CardiacArrestHandler(this, li);
 
         bpmLayout = (RelativeLayout) findViewById(R.id.rl_bpmLayout);
         bpmTxtv = (TextView) findViewById(R.id.txtv_hr);
