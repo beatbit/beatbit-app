@@ -2,6 +2,7 @@ package com.dpc.dchacks2015.monitor;
 
 import android.content.Context;
 import android.location.Location;
+import android.telephony.SmsManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -51,8 +52,9 @@ public class CardiacArrestHandler {
 
         Log.d("monitor", template);
 
-        // TODO: Send a text
 
+        SmsManager smsManager = SmsManager.getDefault();
+        smsManager.sendTextMessage(NUMBER_911, null, template, null, null);
     }
 
 }
