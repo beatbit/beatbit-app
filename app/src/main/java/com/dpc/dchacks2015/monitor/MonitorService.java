@@ -73,7 +73,7 @@ public class MonitorService extends Service implements HeartBeatListener {
             // Notify the monitor activity
             Intent intent = new Intent();
             intent.setAction("com.dpc.dchacks2015.monitor.MonitorService");
-            //sendBroadcast(intent);
+            sendBroadcast(intent);
         }
 
         // TODO: Pop off the back, data is too old to matter
